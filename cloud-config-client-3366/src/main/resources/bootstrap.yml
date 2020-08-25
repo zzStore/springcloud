@@ -1,5 +1,5 @@
 server:
-  port: 3355
+  port: 3366
 spring:
   application:
     name: config-client
@@ -27,9 +27,4 @@ management: #暴露监控端点
       exposure:
         include: "*"
 
-#RabbitMQ相关配置
-rabbitmq:
-  host: localhost
-  port: 5672
-  username: guest
-  password: guest
+
