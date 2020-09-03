@@ -1,3 +1,6 @@
+/Users/zhengzhong/IdeaProjects/springcloud2020/cloud-consumer-order80/src/main/java/com/symphony/myRule/MyselfRule.java
 /Users/zhengzhong/IdeaProjects/springcloud2020/cloud-consumer-order80/src/main/java/com/symphony/springcloud/controller/OrderController.java
 /Users/zhengzhong/IdeaProjects/springcloud2020/cloud-consumer-order80/src/main/java/com/symphony/springcloud/OrderMain80.java
+/Users/zhengzhong/IdeaProjects/springcloud2020/cloud-consumer-order80/src/main/java/com/symphony/springcloud/lb/LoadBalancer.java
 /Users/zhengzhong/IdeaProjects/springcloud2020/cloud-consumer-order80/src/main/java/com/symphony/springcloud/config/ApplicationContextConfig.java
+/Users/zhengzhong/IdeaProjects/springcloud2020/cloud-consumer-order80/src/main/java/com/symphony/springcloud/lb/MyLB.java

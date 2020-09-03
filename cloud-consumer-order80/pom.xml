@@ -20,7 +20,7 @@
     <!--执行器，监控数据-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-actuator</artifactId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
 
     <!--mybatis-->
@@ -78,8 +78,14 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-      <version>2.2.3.RELEASE</version>
     </dependency>
+
+    <!--添加sleuth+zipkin依赖-->
+    <!--zipkin配置失败：Caused by: java.lang.ClassNotFoundException: brave.sampler.Sampler-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework.cloud</groupId>-->
+      <!--<artifactId>spring-cloud-starter-zipkin</artifactId>-->
+    <!--</dependency>-->
 
   </dependencies>
 
