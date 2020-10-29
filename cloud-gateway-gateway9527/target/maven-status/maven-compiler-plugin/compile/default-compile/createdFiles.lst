@@ -1,1 +1,3 @@
 com/symphony/springcloud/GateWayMain9527.class
+com/symphony/springcloud/filter/MyLogGateWayFilter.class
+com/symphony/springcloud/config/GateWayConfig.class

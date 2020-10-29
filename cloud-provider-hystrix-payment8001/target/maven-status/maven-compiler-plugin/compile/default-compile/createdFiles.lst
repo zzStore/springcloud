@@ -1,1 +1,3 @@
+com/symphony/springcloud/controller/PaymentController.class
 com/symphony/springcloud/PaymentHystrixMain8001.class
+com/symphony/springcloud/service/PaymentService.class
