@@ -1,0 +1,27 @@
+server:
+  port: 84
+spring:
+  application:
+    name: nacos-order-consumer
+  cloud:
+    nacos:
+      discovery:
+       server-addr: localhost:8848
+    sentinel:
+      transport: #配置Sentinel dashboard地址
+        dashboard: localhost:8080
+        port: 8719
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  #当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/springcloud_db?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+feign: #激活sentinel对feign的支持
+  sentinel:
+    enabled: true
