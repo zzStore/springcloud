@@ -1,0 +1,113 @@
+server:
+  port: 2003
+spring:
+  application:
+    name: seata-account-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    alibaba:
+      seata:
+        tx-service-group: zz_tx_group #自定义事务组名称与seata-server中对应
+    sentinel:
+      transport:
+        dashboard: localhost:8080 #配置Sentinel dashboard地址
+        port: 8719 #默认8719端口，假如被占用会自动从8719开始依次+1扫描，直至找到未被占用的端口
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  #当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/seata_account?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+feign:
+  sentinel:
+    enabled: false
+logging:
+  level:
+    io:
+     seata: info
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+
+
+#seata:
+#  enabled: true
+#  application-id: seata-order-service
+##  tx-service-group: test
+#  tx-service-group: my_test_tx_group
+#  config:
+#    type: nacos
+#    nacos:
+#      server-addr: 127.0.0.1:8848
+#      userName: "nacos"
+#      password: "nacos"
+#  registry:
+#    type: nacos
+#    nacos:
+#      application: seata-server
+#      server-addr: 127.0.0.1:8848
+#      namespace:
+#      userName: "nacos"
+#      password: "nacos"
+
+
+#seata:
+#  enabled: true
+#  application-id: seata-order-service
+#  tx-service-group: zz_tx_group
+#  enable-auto-data-source-proxy: false
+#  client:
+#    rm:
+#      async-commit-buffer-limit: 1000
+#      report-retry-count: 5
+#      table-meta-check-enable: false
+#      report-success-enable: false
+#      saga-branch-register-enable: false
+#      lock:
+#        retry-interval: 10
+#        retry-times: 30
+#        retry-policy-branch-rollback-on-conflict: true
+#    tm:
+#      degrade-check: false
+#      degrade-check-period: 2000
+#      degrade-check-allow-times: 10
+#      commit-retry-count: 5
+#      rollback-retry-count: 5
+#    undo:
+#      data-validation: true
+#      log-serialization: jackson
+#      log-table: undo_log
+#      only-care-update-columns: true
+#    log:
+#      exceptionRate: 100
+#  service:
+#    vgroupMapping:
+#      fsp_tx_group: default
+#    grouplist:
+#      default: 127.0.0.1:8091
+#    enable-degrade: false
+#    disable-global-transaction: false
+#    config:
+#      type: nacos
+#      nacos:
+#        namespace:
+#        server-addr: 127.0.0.1:8848
+##        group: SEATA_GROUP
+#        username: "nacos"
+#        password: "nacos"
+#    registry:
+#      type: nacos
+#      nacos:
+#        application: seata-server
+#        server-addr: 127.0.0.1:8848
+#        namespace:
+#        userName: "nacos"
+#        password: "nacos"
